@@ -12,4 +12,10 @@ Adaptei o código do projeto: https://github.com/CommWebTeam/vba/blob/748ac5ebc4
 
 Para rodar a macro basta clicar e fim!
 
+## Edit:
+ Adicionei mais duas Macros. 
+ A primeira substitui o início da fórmula com a tag de equation, incrementando em cada fórmula a id da mesma. e1, e2, e3 etc.
+ A segunda substitui e insere a tag equation no final.
+
+
 Thanks to @CommWebTeam !
