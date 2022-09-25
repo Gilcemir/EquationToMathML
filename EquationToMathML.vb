@@ -31,3 +31,39 @@ Else
 End If
 
 End Sub
+
+Sub End_mathMl()
+
+With Selection.Find
+ .ClearFormatting
+ .Text = "</mml:math>"
+ .Replacement.ClearFormatting
+ .Replacement.Text = "</mml:math>[/mmlmath][/equation]"
+ .Execute Replace:=wdReplaceAll, Forward:=True, _
+ Wrap:=wdFindContinue
+End With
+
+End Sub
+
+
+Sub Start2_mathMl()
+Dim i As Long
+    With ActiveDocument.Content
+        With .Find
+            .ClearFormatting
+            .Replacement.ClearFormatting
+            .Text = "<mml:math>"
+            .Forward = True
+            .Wrap = wdFindStop
+            .Format = False
+            .Execute
+        End With
+        While .Find.Found = True
+            i = i + 1
+            .Text = "[equation id=""e" & i & """][mmlmath]<mml:math>"
+            .Collapse wdCollapseEnd
+            .Find.Execute
+        Wend
+    End With
+
+End Sub
