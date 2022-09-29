@@ -12,6 +12,8 @@ Adaptei o código do projeto: https://github.com/CommWebTeam/vba/blob/748ac5ebc4
 
 Para rodar a macro basta clicar e fim!
 
+OBS.: Para a macro funcionar, lembrar que a opção de copiar as fórmulas para o formato MathML tem que estar ativa dentro do Word.
+
 ## Edit:
  Adicionei mais duas Macros. 
  A primeira substitui o início da fórmula com a tag de equation, incrementando em cada fórmula a id da mesma. e1, e2, e3 etc.
